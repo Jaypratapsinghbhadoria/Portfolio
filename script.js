@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
+    // Typing Animation
     const typingElement = document.querySelector('.typing');
     const textArray = ["Jay Pratap Singh Bhadoria", "Web Developer"];
     let arrayIndex = 0; // Tracks current phrase in textArray
@@ -35,4 +36,21 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     type(); // Start the typing animation
+
+    // Navbar Toggle
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    const navItems = document.querySelectorAll('.nav-links li a');
+
+    hamburger.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+    });
+
+    // Close navbar when a link is clicked
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navLinks.classList.remove('active');
+        });
+    });
 });
+
